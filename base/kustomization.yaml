@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: guestbook-kustomize
 
 resources: 
-- ./guestbook/
+- guestbook-ui/
