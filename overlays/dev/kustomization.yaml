@@ -1,7 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-bases:
+resources:
 - ../../base/
 
 namespace: dev
@@ -14,4 +14,4 @@ patches:
   - path: patch-deployment.yaml
     target:
       kind: Deployment
-      name: guestbook-ui #si pas de name il va target tout les deployement
+      name: guestbook-ui  # This ensures the patch is applied to a specific Deployment
